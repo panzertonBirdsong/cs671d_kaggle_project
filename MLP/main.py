@@ -1,8 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from price_model import PriceModel
-from price_model_log import PriceModelLog
-from price_model_boost import PriceModelBoost
 import sys
 
 

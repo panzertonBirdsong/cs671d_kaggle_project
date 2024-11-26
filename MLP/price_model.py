@@ -14,8 +14,6 @@ from sklearn.metrics import accuracy_score
 import proximal_gradient.proximalGradient as pg
 import torch.optim.lr_scheduler as lr_scheduler
 import random
-from transformers import AutoTokenizer, XLMRobertaForSequenceClassification, AutoModelForSequenceClassification
-from description_dataset import DescriptionDataset
 from sklearn.metrics import root_mean_squared_error
 device = torch.device('cuda')
 
@@ -433,7 +431,7 @@ class PriceModel:
 									not_found = False
 						if not_found:
 							x[-1] = 1.0
-						feature[i][j] = x.tolist()
+						feature[i][j] = np.sum(x.tolist())
 
 					case "has_availability":
 						if not math.isnan(feature[i][j]):
