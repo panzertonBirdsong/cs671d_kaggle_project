@@ -1,0 +1,1 @@
+When running this jupyternotebook's training part, train test split block and grid searc cv block cannot be run in sequence. Please rerun the data reading block to reread and process the data and choose either train test split or grid search cv block to run. Thank you!
